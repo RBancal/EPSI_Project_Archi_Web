@@ -10,7 +10,7 @@ namespace SystemExpert.WebUI.App_Start
     {
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new StyleBundle("~/bundles/bootstrap")
+            bundles.Add(new StyleBundle("~/Content/bootstrap")
                 .Include("~/Content/bootstrap.min.css"));
         }
     }

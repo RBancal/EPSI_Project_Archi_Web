@@ -13,10 +13,10 @@ namespace SystemExpert.Domain
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class SystemExpertContainer : DbContext
+    public partial class SystemExpertEntities : DbContext
     {
-        public SystemExpertContainer()
-            : base("name=SystemExpertContainer")
+        public SystemExpertEntities()
+            : base("name=SystemExpertEntities")
         {
         }
     
@@ -25,5 +25,6 @@ namespace SystemExpert.Domain
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Question> Questions { get; set; }
     }
 }
