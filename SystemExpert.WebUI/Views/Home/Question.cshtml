@@ -1,0 +1,13 @@
+﻿@model SystemExpert.WebUI.Models.QuestionViewModel
+
+@{
+    ViewBag.Title = "Poser une question";
+}
+
+<h2>Index</h2>
+
+@using(Html.BeginForm("Question", "Home", FormMethod.Post))
+{
+    @Html.TextAreaFor(m => m.Question)
+    <input type="submit" value="valider"/>
+}
